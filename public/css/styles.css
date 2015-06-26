@@ -1,0 +1,72 @@
+* { 
+	margin: 0; padding: 0; box-sizing: border-box; 
+}
+
+body { 
+	font: 13px Helvetica, Arial;
+	padding: 0;
+	margin: 0;
+}
+
+#nav {
+	position: fixed;
+	top: 0;
+	background: black;
+	height: 50px;
+	width: 100%;
+	text-align: center;
+}
+
+#navbar {
+	display: inline-block;
+	list-style: none;
+}
+
+.navItem {
+	text-decoration: none;
+	color: white;
+}
+
+.navItem a {
+	
+}
+
+.main {
+	margin-top: 50px;
+}
+
+form { 
+	background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; 
+}
+
+form input { 
+	border: 0; padding: 10px; width: 90%; margin-right: .5%; 
+}
+
+form button { 
+	width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; 
+}
+
+#welcome {
+	font-size: 16px;
+}
+
+.conversation { 
+	list-style-type: none; margin: 0; padding: 0; 
+}
+
+.conversation li { 
+	padding: 5px 10px; 
+}
+
+.conversation li:nth-child(odd) { 
+	background: #eee; 
+}
+
+.username {
+	display: inline-block;
+}
+
+.conversationMessage {
+	display: inline-block;
+}

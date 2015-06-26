@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "description": "My first socket.io app",
   "dependencies": {
-    "express": "^4.12.4"
+    "express": "latest",
+    "socket.io": "latest",
+    "jade": "latest"
   }
 }
