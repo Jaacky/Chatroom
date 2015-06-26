@@ -2,16 +2,99 @@ doctype html
 html
 	head
 		title= "Jacky Van"
+		//script(src='../bower_components/bootstrap/dist/css/bootstrap.min.css')
 		style
+			include ../bower_components/bootstrap/dist/css/bootstrap.min.css
 			include ../public/css/styles.css
+
+		link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', rel='stylesheet')
+		
 	body
 
-		div#nav
-			ul#navbar
-				a.navItem(href='chat-room') 
-					li ChatRoom
-					
+		nav.nav.navbar-default.navbar-fixed-top
+			div.container-fluid
+				div.navbar-header
+					a.navbar-brand(href='') Jacky
 
-		div.main
-			div.banner
-				h1 Jacky Van
+
+				ul.nav.navbar-nav
+					li
+						a(href='chat-room') ChatRoom
+			ul.nav.nav-tabs
+				li
+					a(href='#about') About
+				li
+					a(href='#experience') Experience
+				li
+					a(href='#projects') Projects
+
+		div.container-fluid.banner.boxRow#about
+			div.row.transparent-layer
+				div.col-md-8.col-md-offset-1
+					div.blurb
+						h1 Jacky Van
+						h4 University of Toronto '17, Developer, Foodie
+						div.social-media
+							a(href='https://twitter.com/JaackyVee') 
+								i.fa.fa-twitter-square.fa-lg
+							a(href='https://ca.linkedin.com/in/jackyvan') 		
+								i.fa.fa-linkedin-square.fa-lg
+							a(href='https://github.com/Jaacky') 	
+								i.fa.fa-github-square.fa-lg
+					div.description
+						p The unknown is as beautiful and captivating as it is frightening and draining.
+						br 
+						p I am pursuing a Computer Science specialist with a great interest in software development and web technologies. Dragon boat is a huge part of my life; I am currently co-captain of the Rotman Commerce Liquid Assets.
+		div.container-fluid.boxRow#experience
+			div.row.transparent-layer.top
+				div.col-md-11.col-md-offset-1.header
+					h2 Experiences
+				div.col-md-11.col-md-offset-1
+					h4 I am currently a software developer at Three Point Turn in Toronto.
+				div.col-md-11.col-md-offset-1
+					h3 Prowess in:
+					div.row
+						div.col-md-1
+							p Java
+							p Javascript
+							p PHP
+						div.col-md-1
+							p C
+							p Ruby
+							p CSS
+						div.col-md-1
+							p Python
+							p SQL
+							p HTML
+				div.col-md-11.col-md-offset-1
+					h3 Immersed in:
+					div.row
+						div.col-md-1
+							p Node.js
+							p Express
+							p Socket.io
+						div.col-md-1
+							p Magento
+							p Bower
+							p Zend
+						div.col-md-1
+							p Rails
+							p Yii
+							p Bootstrap
+						div.col-md-1
+							p AWS
+							p Git
+							p SVN
+						div.col-md-1
+							p Jade
+							p Chrome
+							p 
+						div.col-md-1
+							p 
+							p 
+							p 
+
+		div.container-fluid.boxRow#projects
+			div.row.transparent-layer.top
+				div.col-md-11.col-md-offset-1.header
+					h2 Projects

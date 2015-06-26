@@ -19,6 +19,10 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
+app.get('/index', function(req, res){
+	res.render('index');
+});
+
 app.get('/chatroom', function(req, res) {
 	res.sendFile(__dirname + '/chatroom.html');
 });

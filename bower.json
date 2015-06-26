@@ -1,0 +1,13 @@
+{
+  "name": "chatroom",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jaacky/chatroom",
+  "authors": [
+    "Jacky <jaackyvan@gmail.com>"
+  ],
+  "description": "\"My first socket.io app\"",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "fontawesome": "~4.3.0"
+  }
+}
