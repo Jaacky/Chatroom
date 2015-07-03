@@ -29,4 +29,18 @@ $(document).ready( function() {
 		));
 	});
 
+	socket.on('old messages', function(data) {
+		console.log("received old messages");
+		var testDate = new Date(data[1].timestamp);
+		console.log(data[1].timestamp);
+		console.log(testDate.toLocaleString());
+		for (var i=(data.length - 1); i >= 0; i--) {
+			var timestamp = new Date(data[i].timestamp);
+			$('.conversation').append($('<li>').append(
+				$('<div class="username">').append('[' + timestamp.toLocaleString() + '] ' + data[i].name + '&nbsp;-&nbsp;'),
+				$('<div class="conversationMessage">').append(data[i].message)
+			));
+		}
+	});
+
 });

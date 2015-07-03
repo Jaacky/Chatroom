@@ -5,6 +5,8 @@
   "dependencies": {
     "express": "latest",
     "socket.io": "latest",
-    "jade": "latest"
+    "jade": "latest",
+    "mongodb": "~2.0",
+    "mongoose": "latest"
   }
 }
