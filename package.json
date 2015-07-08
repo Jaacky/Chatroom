@@ -4,10 +4,12 @@
   "description": "My first socket.io app",
   "dependencies": {
     "express": "latest",
-    "socket.io": "latest",
+    "forever": "latest",
+    "ip": "^0.3.3",
     "jade": "latest",
     "mongodb": "~2.0",
+    "mongodb-uri": "^0.9.7",
     "mongoose": "latest",
-    "forever": "latest"
+    "socket.io": "latest"
   }
 }

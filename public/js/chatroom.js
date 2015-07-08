@@ -1,7 +1,7 @@
 $(document).ready( function() {
 
-	var socket = io.connect('http://localhost:8080');
-
+	//var socket = io.connect('http://localhost:8080');
+	var socket = io.connect('http://54.173.137.187');
 	$('form').submit( function(data) {
 
 		socket.emit(

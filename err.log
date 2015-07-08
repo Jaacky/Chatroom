@@ -2,3 +2,67 @@ util.puts: Use console.log instead
 util.puts: Use console.log instead
 util.puts: Use console.log instead
 util.puts: Use console.log instead
+module.js:338
+    throw err;
+    ^
+Error: Cannot find module 'mongodb-uri'
+    at Function.Module._resolveFilename (module.js:336:15)
+    at Function.Module._load (module.js:278:25)
+    at Module.require (module.js:365:17)
+    at require (module.js:384:17)
+    at Object.<anonymous> (/home/ec2-user/www/jacky.me/server.js:14:12)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Function.Module.runMain (module.js:501:10)
+    at startup (node.js:129:16)
+    at node.js:814:3
+module.js:338
+    throw err;
+    ^
+Error: Cannot find module 'mongodb-uri'
+    at Function.Module._resolveFilename (module.js:336:15)
+    at Function.Module._load (module.js:278:25)
+    at Module.require (module.js:365:17)
+    at require (module.js:384:17)
+    at Object.<anonymous> (/home/ec2-user/www/jacky.me/server.js:14:12)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Function.Module.runMain (module.js:501:10)
+    at startup (node.js:129:16)
+    at node.js:814:3
+util.puts: Use console.log instead
+util.puts: Use console.log instead
+events.js:85
+      throw er; // Unhandled 'error' event
+            ^
+Error: listen EACCES
+    at exports._errnoException (util.js:746:11)
+    at Server._listen2 (net.js:1139:19)
+    at listen (net.js:1182:10)
+    at Server.listen (net.js:1267:5)
+    at EventEmitter.listen (/home/ec2-user/www/jacky.me/node_modules/express/lib/application.js:617:24)
+    at Object.<anonymous> (/home/ec2-user/www/jacky.me/server.js:8:39)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+util.puts: Use console.log instead
+events.js:85
+      throw er; // Unhandled 'error' event
+            ^
+Error: listen EACCES
+    at exports._errnoException (util.js:746:11)
+    at Server._listen2 (net.js:1139:19)
+    at listen (net.js:1182:10)
+    at Server.listen (net.js:1267:5)
+    at EventEmitter.listen (/home/ec2-user/www/jacky.me/node_modules/express/lib/application.js:617:24)
+    at Object.<anonymous> (/home/ec2-user/www/jacky.me/server.js:8:39)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+util.puts: Use console.log instead

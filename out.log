@@ -4,3 +4,13 @@ Server is running on 8080
 Listening on *:8080
 Server is running on 8080
 Listening on *:8080
+Server is running on 8080
+Mongoose connection open to mongodb://admin:h3l1x@ds047458.mongolab.com:47458/helix
+Server is running on 8080
+Server is running on 8080
+Server is running on 8080
+Mongoose connection open to mongodb://admin:h3l1x@ds047458.mongolab.com:47458/helix
+A new connection
+Getting old messages
+true
+Emitted old messages

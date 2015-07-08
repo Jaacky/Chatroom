@@ -7,6 +7,8 @@ var port = 8080,
 	url = 'mongodb://localhost:27017/chatroom',
 	io = require('socket.io').listen(app.listen(port));
 
+var ip = require('ip').address();
+
 // mongodb setup
 var mongoClient = require('mongodb').MongoClient,
 	mongoose = require('mongoose'),
@@ -63,6 +65,7 @@ app.get('/jade-page', function(req, res) {
 });
 
 app.get('/chat-room', function(req, res) {
+	//res.json(ip);
 	res.render('chatroom');
 });
 
