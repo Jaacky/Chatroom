@@ -10,13 +10,21 @@ var port = 8080,
 // mongodb setup
 var mongoClient = require('mongodb').MongoClient,
 	mongoose = require('mongoose'),
-	assert = require('assert');
+	assert = require('assert'),
+	uriUtil = require('mongodb-uri');
 
-mongoose.connect(url);
+var mongodbUri = 'mongodb://admin:h3l1x@ds047458.mongolab.com:47458/helix',
+	mongooseUri = uriUtil.formatMongoose(mongodbUri),
+	options = {
+		server: { socketOptions: { keepAlive:1, connectTimeoutMS: 30000 } },
+		replset: { socketOptions: { keepAlive: 1, connecttimeoutMS: 30000} }
+	};
+
+mongoose.connect(mongooseUri, options);
 var db = mongoose.connection;
 
 db.on('connected', function() {
-	console.log('Mongoose connection open to ' + url);
+	console.log('Mongoose connection open to ' + mongooseUri);
 });
 db.on('error', function(err) {
 	console.log('Mongoose connection error: ', err);
@@ -59,7 +67,7 @@ app.get('/chat-room', function(req, res) {
 });
 
 io.sockets.on('connection', function(socket){
-	socket.emit('welcome message', {message: 'Welcome to chat'});
+	socket.emit('welcome message', {message: 'Welcome to the chatroom'});
 	console.log("A new connection");
 
 	// display last 3 messages
@@ -71,8 +79,8 @@ io.sockets.on('connection', function(socket){
 
 	socket.on('new message', function(data) {
 		// Received new message
-		storeMessage(data, function() {
-			io.sockets.emit('new message', data);
+		storeMessage(data, function(message) {
+			io.sockets.emit('new message', message);
 		});
 	});
 
@@ -84,8 +92,13 @@ io.sockets.on('connection', function(socket){
 function getRecentMessages(socket) {
 	Message.find({}).limit(3).sort({timestamp: 'desc'}).exec(function(err, messages) {
 		console.log("Getting old messages");
-		socket.emit("old messages", messages);
-		console.log("Emitted old messages");
+		console.log(!!messages.length);
+		// if no old messages don't emit
+		if (messages.length) {
+			socket.emit("old messages", messages);
+			console.log("Emitted old messages");
+		}
+		
 	})
 }
 
@@ -102,7 +115,7 @@ function storeMessage(data, callback) {
 		console.log("Saved message to database");
 	});
 
-	callback();
+	callback(message);
 }
 
 sys.puts("Server is running on 8080");

@@ -23,8 +23,9 @@ $(document).ready( function() {
 
 	socket.on('new message', function(data) {
 		console.log(data);
+		timestamp = new Date(data.timestamp);
 		$('.conversation').append($('<li>').append(
-			$('<div class="username">').append(data.username + '&nbsp;-&nbsp;'),
+			$('<div class="username">').append('[' + timestamp.toLocaleString() + '] ' + data.name + '&nbsp;-&nbsp;'),
 			$('<div class="conversationMessage">').append(data.message)
 		));
 	});

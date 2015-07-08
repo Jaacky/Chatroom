@@ -6,11 +6,12 @@ html
 		script(src='/socket.io/socket.io.js')
 		script(src='js/chatroom.js')
 		style
+			include ../bower_components/bootstrap/dist/css/bootstrap.min.css
 			include ../public/css/styles.css
 	body
 		ul.conversation
 		form
-			input#username
-			input#message
-			button Send
+			input#username(placeholder="Your name")
+			input#message(placeholder="Message")
+			button.btn.btn-primary Send
 
